@@ -89,4 +89,13 @@ public class HitListener implements Listener {
 
 
     public boolean isTagged(Player player){ return combatTagged.containsKey(player.getUniqueId()); }
+
+    public int getTimeLeft(Player player){
+        if(!combatTagged.containsKey(player.getUniqueId())){
+            return 0;
+        }
+        
+        return combatTagged.get(player.getUniqueId());
+    }
+    
 }
